@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=500, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<form name="myform" style="background-color:green;width:800px;height:600px;margin:100px;border:5px solid black;" id="myform">
+<center>
+<h1>Registration Details</h1></center>
+<div class="container">
+   <form role="form">
+<div class="col-xs-6">
+    <div class="form-group">
+
+      <label for="first name">First Name:</label>
+
+
+<input type="text" class="form-control" id="r1" value="Sriram" placeholder="Enter First Name">
+</div>
+</div>
+
+ <br>
+<br><br><br>  
+<div class="col-xs-6">
+<div class="form-group">
+      <label for="Last name">Last Name:</label>
+<input type="text" class="form-control" id="r2"value="Srivatsan" placeholder="Enter Last Name">
+     
+</div>
+</div>
+
+ <br>
+<br><br><br>
+<div class="col-xs-6">
+<div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="r3" value="sri@xyz.com" placeholder="Enter email">
+    </div>
+</div>
+
+ <br>
+<br><br><br>
+<div class="col-xs-6">
+<div class="form-group">
+      <label for="designation">Designation:</label>
+      <input type="text" class="form-control" id="r4" value="Software Engineer" placeholder="Enter Designation">
+    </div>
+</div>
+
+ <br>
+<br><br><br>
+<div class="col-xs-6">
+<div class="form-group">
+<label for="Contactno">Contact No:</label>
+      <input type="text" class="form-control" id="r5" value="123456789" placeholder="Contact No">
+    </div>
+</div>
+
+ <br>
+<br><br><br>
+    
+    
+
+<br> 
+<div class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit details</h4>
+        </div>
+        <div class="modal-body">
+          
+<h3> First Name:<input type=text  id="a1"></h2>
+<h3> Last Name:<input type=text   id="a2"></h2>
+<h3> Email:<input type=text  id="a3"></h2>
+<h3> Designation:<input type=text   id="a4"></h2>
+<h3> Contact No:<input type=text   id="a5"></h2>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+ <button type="button"  class="btn btn-default" data-dismiss="modal" onclick="display();">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<script>
+function dis(){
+document.forms["myform"]["a1"].value=document.forms["myform"]["r1"].value;
+document.forms["myform"]["a2"].value=document.forms["myform"]["r2"].value;
+document.forms["myform"]["a3"].value=document.forms["myform"]["r3"].value;
+document.forms["myform"]["a4"].value=document.forms["myform"]["r4"].value;
+document.forms["myform"]["a5"].value=document.forms["myform"]["r5"].value;
+} 
+dis();
+function display(){
+document.forms["myform"]["r1"].value=document.forms["myform"]["a1"].value;
+document.forms["myform"]["r2"].value=document.forms["myform"]["a2"].value;
+document.forms["myform"]["r3"].value=document.forms["myform"]["a3"].value;
+document.forms["myform"]["r4"].value=document.forms["myform"]["a4"].value;
+document.forms["myform"]["r5"].value=document.forms["myform"]["a5"].value;
+}
+</script>
+</form>
+</body>
+</html>
